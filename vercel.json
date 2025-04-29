@@ -1,12 +1,21 @@
 {
   "redirects": [
     {
-      "source": "/((?!page2|assets).*)",
-      "has": [
-        { "type": "header", "key": "Accept", "value": "text/html" }
-      ],
+      "source": "/:path*",
       "destination": "https://www.alexbon.com/",
       "permanent": true
+    }
+  ],
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/assets/:path*",
+      "destination": "/assets/:path*"
+    },
+    {
+      "source": "/ua",
+      "destination": "/ua.html"
     }
   ]
 }
