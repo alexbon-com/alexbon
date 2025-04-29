@@ -1,7 +1,10 @@
 {
   "redirects": [
     {
-      "source": "/:path*",
+      "source": "/((?!page2|assets).*)",
+      "has": [
+        { "type": "header", "key": "Accept", "value": "text/html" }
+      ],
       "destination": "https://www.alexbon.com/",
       "permanent": true
     }
