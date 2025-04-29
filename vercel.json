@@ -1,9 +1,14 @@
 {
-  "redirects": [
+  "routes": [
     {
-      "source": "/:path*",
-      "destination": "https://www.alexbon.com/",
-      "permanent": true
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "status": 301,
+      "headers": {
+        "Location": "https://www.alexbon.com/"
+      }
     }
   ]
 }
